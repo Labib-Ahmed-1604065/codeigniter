@@ -24,6 +24,9 @@ class Pages extends CI_Controller
 	public function myindex()
 	{
 		$this->load->view('page/about');
+		$this->load->model('myindex_model');
+		$a=$this->myindex_model->firstname();
+		echo $a;
 	}
 }
 
