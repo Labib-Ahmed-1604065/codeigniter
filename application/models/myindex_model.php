@@ -2,17 +2,12 @@
 
 class myindex_model extends CI_Model
 {
-	public function firstname()
+	public function db()
 	{
-		$firstname="Labib";
-		$a=$this->fname();
+		$this->load->database();
+		$a=$this->db->query("SELECT * FROM `users`");
+		$a->result_array();
 		return $a;
 	}
-	private function fname()
-	{
-		$firstname="Labib";
-		return $firstname;
-	}
 }
-
 ?>
